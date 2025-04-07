@@ -1,0 +1,97 @@
+/* Estilos específicos para la página de proceso */
+.process-header {
+    padding: 120px 0 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1599639932525-4e9a5ce71b4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;
+    color: white;
+}
+
+.process-step {
+    padding: 80px 0;
+}
+
+.process-step:nth-child(even) {
+    background-color: var(--light-color);
+}
+
+.process-number {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    opacity: 0.3;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.process-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.process-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.process-image:hover img {
+    transform: scale(1.05);
+}
+
+.process-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.process-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.process-facts {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 80px 0;
+}
+
+.fact-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fact-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.fact-text {
+    font-size: 1.2rem;
+}
+
+.quality-section {
+    padding: 80px 0;
+}
+
+.quality-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quality-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quality-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
