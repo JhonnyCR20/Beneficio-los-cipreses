@@ -5,16 +5,18 @@
     /* Tema Claro */
     --bg-primary: #F5EFE6; /* Fondo principal: Café claro crema */
     --bg-secondary: #E8DCC3; /* Fondo secundario: Beige neutro */
-    --text-primary: #4E342E; /* Texto principal: Marrón oscuro */
-    --text-secondary: #6D4C41; /* Texto secundario: Marrón medio */
+    --text-primary: #3E2723; /* Texto principal: Marrón oscuro (más oscuro para mejor contraste) */
+    --text-secondary: #5D4037; /* Texto secundario: Marrón medio (más oscuro) */
     --accent-1: #A47148; /* Color acento 1: Caramelo tostado */
     --accent-2: #8E9775; /* Color acento 2: Verde oliva suave */
     --btn-primary: #3E2723; /* Botones destacados: Café intenso */
     --btn-text: #FFFFFF; /* Texto en botones */
-    --navbar-bg: rgba(62, 39, 35, 0.9); /* Fondo de navbar */
+    --navbar-bg: rgba(62, 39, 35, 0.95); /* Fondo de navbar (más opaco) */
     --card-bg: #FFFFFF; /* Fondo de tarjetas */
     --card-shadow: rgba(0, 0, 0, 0.1); /* Sombra de tarjetas */
     --divider-color: #A47148; /* Color de divisores */
+    --timeline-bg: #FFFFFF; /* Fondo para timeline */
+    --timeline-text: #3E2723; /* Texto para timeline */
 }
 
 /* Variables de tema oscuro */
@@ -22,16 +24,18 @@
     /* Tema Oscuro */
     --bg-primary: #1C1B18; /* Fondo principal: Café negro suave */
     --bg-secondary: #2E2A25; /* Fondo secundario: Marrón oscuro */
-    --text-primary: #EFE6DD; /* Texto principal: Crema claro */
-    --text-secondary: #D7CBBF; /* Texto secundario: Beige suave */
-    --accent-1: #C68B59; /* Color acento 1: Caramelo brillante */
-    --accent-2: #7C9A77; /* Color acento 2: Verde musgo elegante */
+    --text-primary: #F5EFE6; /* Texto principal: Crema claro (más claro para mejor contraste) */
+    --text-secondary: #E8DCC3; /* Texto secundario: Beige suave (más claro) */
+    --accent-1: #D6A77C; /* Color acento 1: Caramelo brillante (más claro) */
+    --accent-2: #8CAA87; /* Color acento 2: Verde musgo elegante (más claro) */
     --btn-primary: #BFA177; /* Botones destacados: Beige tostado claro */
     --btn-text: #1C1B18; /* Texto en botones */
     --navbar-bg: rgba(28, 27, 24, 0.95); /* Fondo de navbar */
     --card-bg: #2E2A25; /* Fondo de tarjetas */
     --card-shadow: rgba(0, 0, 0, 0.3); /* Sombra de tarjetas */
-    --divider-color: #C68B59; /* Color de divisores */
+    --divider-color: #D6A77C; /* Color de divisores (más claro) */
+    --timeline-bg: #2E2A25; /* Fondo para timeline */
+    --timeline-text: #F5EFE6; /* Texto para timeline */
 }
 
 /* Estilos para el botón de cambio de tema */
@@ -114,7 +118,7 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: var(--text-primary);
+    color: #F5EFE6; /* Color fijo para mejor visibilidad en ambos temas */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,

@@ -123,12 +123,13 @@ body {
 
 /* Proceso Section */
 .process-card {
-    background-color: var(--white-color);
+    background-color: var(--card-bg);
     padding: 30px 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px var(--card-shadow);
     transition: all 0.3s ease;
     height: 100%;
+    color: var(--text-primary);
 }
 
 .process-card:hover {
@@ -161,12 +162,13 @@ body {
 
 /* Productos Section */
 .product-card {
-    background-color: var(--white-color);
+    background-color: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px var(--card-shadow);
     transition: all 0.3s ease;
     height: 100%;
+    color: var(--text-primary);
 }
 
 .product-card:hover {
