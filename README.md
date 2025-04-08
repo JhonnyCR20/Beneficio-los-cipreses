@@ -1,3 +1,6 @@
+# Programador: Jhonny Miranda Salazar
+# TCU 653 Asesorías pymes
+
 # Beneficio Los Cipreses - Sitio Web
 
 Sitio web promocional para Beneficio Los Cipreses, una empresa dedicada al procesamiento y venta de café de alta calidad.
@@ -49,4 +52,4 @@ Puedes personalizar este sitio web modificando:
 
 Desarrollado para Beneficio Los Cipreses.
 
-Imágenes: Unsplash
+Imágenes: Dibeth Villavicencio
