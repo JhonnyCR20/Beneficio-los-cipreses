@@ -1,26 +1,72 @@
 // Script principal para Beneficio Los Cipreses
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Sistema de cambio de tema (claro/oscuro)
+    // Función para inicializar el cambio de tema
     const themeSwitch = document.getElementById('theme-switch');
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
-    // Verificar si hay una preferencia guardada
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    // Establecer el tema inicial basado en la preferencia guardada
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    // Actualizar el estado del interruptor según el tema actual
+    if (currentTheme === 'dark') {
         themeSwitch.checked = true;
     }
     
-    // Manejar el cambio de tema
+    // Manejar el cambio de tema cuando se hace clic en el interruptor
     themeSwitch.addEventListener('change', function() {
         if (this.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
         } else {
-            document.documentElement.removeAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
         }
     });
+    
+    // Función para inicializar las miniaturas del carrusel
+    function initCarouselThumbnails() {
+        const carouselId = 'carouselNosotros';
+        const carousel = document.getElementById(carouselId);
+        
+        // Si no existe el carrusel en la página actual, salir de la función
+        if (!carousel) return;
+        
+        const thumbnails = document.querySelectorAll('.thumbnail-item');
+        
+        // Añadir evento click a cada miniatura
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                // Obtener el índice del slide al que se quiere ir
+                const slideIndex = this.getAttribute('data-bs-slide-to');
+                
+                // Actualizar la clase active en las miniaturas
+                thumbnails.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Cambiar al slide correspondiente usando la API de Bootstrap
+                const bsCarousel = bootstrap.Carousel.getInstance(carousel);
+                bsCarousel.to(parseInt(slideIndex));
+            });
+        });
+        
+        // Actualizar la miniatura activa cuando cambia el carrusel
+        carousel.addEventListener('slide.bs.carousel', function(event) {
+            const slideIndex = event.to;
+            
+            // Actualizar la clase active en las miniaturas
+            thumbnails.forEach((item, index) => {
+                if (index === slideIndex) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    }
+    
+    // Inicializar el carrusel si existe en la página
+    initCarouselThumbnails();
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     

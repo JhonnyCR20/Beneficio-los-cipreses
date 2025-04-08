@@ -105,6 +105,234 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para la sección combinada de Sobre Nosotros y Carrusel */
+.sobre-nosotros-carrusel-section {
+    padding: 60px 0;
+    background-color: var(--light-color);
+}
+
+/* Estilos para la tarjeta de Sobre Nosotros */
+.sobre-nosotros-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%; /* Usar altura completa para igualar con el contenedor del carrusel */
+    min-height: 570px; /* Altura mínima ajustada para incluir carrusel (500px) + espacio para miniaturas (70px) */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear contenido desde arriba */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+    overflow-y: auto; /* Permitir scroll si el contenido es muy largo */
+    padding-top: 30px; /* Añadir un poco de espacio en la parte superior */
+}
+
+/* Estilos para el carrusel de imágenes */
+.carousel-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    margin-bottom: 0; /* Eliminamos el espacio para las miniaturas ya que están dentro del contenedor */
+}
+
+.carousel-item {
+    height: 500px; /* Altura fija para igualar con la tarjeta */
+    overflow: hidden;
+}
+
+/* Logo en esquina inferior izquierda del carrusel */
+.carousel-logo {
+    position: absolute;
+    bottom: 60px; /* Ajustado para que quede dentro de la imagen activa del carrusel */
+    left: 5px;
+    z-index: 10;
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    display: none; /* Por defecto ocultos, se mostrarán según el tema */
+}
+
+.carousel-logo:hover {
+    opacity: 1;
+}
+
+/* Control de visibilidad de logos según el tema */
+/* Mostrar logo oscuro en tema claro */
+:root:not([data-theme="dark"]) .logo-light-theme {
+    display: block;
+}
+
+/* Mostrar logo claro en tema oscuro */
+[data-theme="dark"] .logo-dark-theme {
+    display: block;
+}
+
+/* Barra de miniaturas para el carrusel */
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.thumbnail-item {
+    width: 70px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail-item.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+}
+
+.thumbnail-item:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .sobre-nosotros-card {
+        min-height: 465px; /* Altura mínima ajustada: carrusel (400px) + miniaturas (65px) para pantallas medianas */
+    }
+    .carousel-item {
+        height: 400px; /* Altura ajustada para pantallas medianas */
+    }
+    
+    [data-theme="dark"] .sobre-nosotros-card {
+        min-height: 465px; /* Misma altura mínima ajustada para incluir carrusel y miniaturas en modo oscuro */
+    }
+    
+    .carousel-logo {
+        width: 60px;
+    }
+    
+    .thumbnail-item {
+        width: 60px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros-card {
+        min-height: 410px; /* Altura mínima ajustada: carrusel (350px) + miniaturas (60px) para móviles */
+    }
+    
+    .carousel-item {
+        height: 350px; /* Altura ajustada para móviles */
+    }
+    
+    [data-theme="dark"] .sobre-nosotros-card {
+        min-height: 410px; /* Misma altura mínima ajustada para incluir carrusel y miniaturas en modo oscuro para móviles */
+    }
+    
+    .sobre-nosotros-carrusel-section .col-lg-4:first-child {
+        margin-bottom: 0;
+    }
+    
+    /* Ajuste para eliminar espacio entre tarjeta y carrusel */
+    .sobre-nosotros-carrusel-section .row.align-items-center {
+        margin: 0;
+    }
+    
+    .carousel-container {
+        margin-bottom: 40px; /* Más espacio para las miniaturas en móvil */
+    }
+    
+    .carousel-logo {
+        width: 50px;
+    }
+    
+    .thumbnail-item {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+/* Estilos adicionales para la sección combinada */
+.sobre-nosotros-carrusel-section .section-title {
+    margin-bottom: 1rem;
+}
+
+.sobre-nosotros-carrusel-section .carousel {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para tema oscuro */
+[data-theme="dark"] .sobre-nosotros-carrusel-section {
+    background-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .sobre-nosotros-carrusel-section .carousel {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .sobre-nosotros-card {
+    background-color: var(--dark-card-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    min-height: 570px; /* Misma altura mínima ajustada para incluir carrusel y miniaturas en modo oscuro */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Eliminamos el caption del carrusel según lo solicitado */
+.carousel-caption {
+    display: none;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* Ajustes para tema oscuro */
+[data-theme="dark"] .carousel-control-prev-icon,
+[data-theme="dark"] .carousel-control-next-icon {
+    filter: brightness(0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    z-index: 15;
+}
+
 .team-img {
     position: relative;
     overflow: hidden;

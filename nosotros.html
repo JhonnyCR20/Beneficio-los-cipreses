@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Beneficio Los Cipreses</title>
     <!-- Favicon -->
-    <link rel="icon" href="img/logo obscuro.jpg" type="image/jpeg">
+    <link rel="icon" href="img/logo obscuro.png" type="image/jpeg">
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome para iconos -->
@@ -67,19 +67,131 @@
         </div>
     </header>
 
-    <!-- Introducción -->
-    <section class="py-5">
+    <!-- Introducción y Carrusel en un mismo contenedor -->
+    <section class="py-5 sobre-nosotros-carrusel-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title">Sobre Nosotros</h2>
-                    <div class="divider mx-auto"></div>
-                    <p class="lead">Beneficio Los Cipreses es una empresa familiar con más de tres décadas de
-                        experiencia en el procesamiento y comercialización de café de alta calidad.</p>
-                    <p>Ubicados en el corazón de una región cafetalera privilegiada, hemos dedicado nuestra vida a
-                        perfeccionar cada etapa del proceso del café, desde la selección de los mejores granos hasta el
-                        empaquetado final, garantizando un producto excepcional que refleja la riqueza de nuestra tierra
-                        y la pasión de nuestra gente.</p>
+            <div class="row align-items-center">
+                <!-- Columna de texto "Sobre Nosotros" en una tarjeta pequeña -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="sobre-nosotros-card">
+                        <h2 class="section-title">Sobre Nosotros</h2>
+                        <div class="divider"></div>
+                        <p class="lead">Beneficio Los Cipreses es una empresa familiar con más de tres décadas de
+                            experiencia en el procesamiento y comercialización de café de alta calidad.</p>
+                        <p>Ubicados en el corazón de una región cafetalera privilegiada, hemos dedicado nuestra vida a
+                            perfeccionar cada etapa del proceso del café, desde la selección de los mejores granos hasta el
+                            empaquetado final, garantizando un producto excepcional que refleja la riqueza de nuestra tierra
+                            y la pasión de nuestra gente.</p>
+                    </div>
+                </div>
+                
+                <!-- Columna del carrusel moderno -->
+                <div class="col-lg-8">
+                    <div class="carousel-container">
+                        <!-- Logos en esquina inferior izquierda (uno para cada tema) -->
+                        <img src="img/logo claro.png" class="carousel-logo logo-light-theme" alt="Logo Los Cipreses (Tema Claro)">
+                        <img src="img/logo obscuro.png" class="carousel-logo logo-dark-theme" alt="Logo Los Cipreses (Tema Oscuro)">
+                        
+                        <!-- Carrusel principal -->
+                        <div id="carouselNosotros" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselNosotros" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                            </div>
+                            <div class="carousel-inner rounded">
+                                <div class="carousel-item active">
+                                    <img src="img/Cafe los cipreses.jpg" class="d-block w-100" alt="Beneficio Los Cipreses">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/DJI_0148.JPG" class="d-block w-100" alt="Vista aérea del beneficio">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/caturra.jpg" class="d-block w-100" alt="Café Caturra">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/3cafe.jpg" class="d-block w-100" alt="Proceso de café">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/DJI_0149.JPG" class="d-block w-100" alt="Vista aérea del beneficio 2">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/DJI_0154.JPG" class="d-block w-100" alt="Miniatura 6">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/PXL_20240225_212517183.jpg" class="d-block w-100" alt="Miniatura 7">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cafe1.jpg" class="d-block w-100" alt="El Abuelo 2">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cafe2.jpg" class="d-block w-100" alt="El Abuelo 2">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cafe3.jpg" class="d-block w-100" alt="El Abuelo 2">
+                                    <div class="carousel-caption"></div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNosotros" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNosotros" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Barra de miniaturas para navegación -->
+                        <div class="carousel-thumbnails">
+                            <div class="thumbnail-item active" data-bs-target="#carouselNosotros" data-bs-slide-to="0">
+                                <img src="img/Cafe los cipreses.jpg" alt="Miniatura 1">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="1">
+                                <img src="img/DJI_0148.JPG" alt="Miniatura 2">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="2">
+                                <img src="img/caturra.jpg" alt="Miniatura 3">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="3">
+                                <img src="img/3cafe.jpg" alt="Miniatura 4">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="4">
+                                <img src="img/DJI_0149.JPG" alt="Miniatura 5">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="5">
+                                <img src="img/DJI_0154.JPG" alt="Miniatura 6">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="6">
+                                <img src="img/PXL_20240225_212517183.jpg" alt="Miniatura 7">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="7">
+                                <img src="img/cafe1.jpg" alt="Miniatura 8">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="8">
+                                <img src="img/cafe2.jpg" alt="Miniatura 8">
+                            </div>
+                            <div class="thumbnail-item" data-bs-target="#carouselNosotros" data-bs-slide-to="9">
+                                <img src="img/cafe3.jpg" alt="Miniatura 8">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -31,11 +31,12 @@
     --btn-primary: #BFA177; /* Botones destacados: Beige tostado claro */
     --btn-text: #1C1B18; /* Texto en botones */
     --navbar-bg: rgba(28, 27, 24, 0.95); /* Fondo de navbar */
-    --card-bg: #2E2A25; /* Fondo de tarjetas */
+    --card-bg: #1C1B18; /* Fondo de tarjetas más oscuro */
     --card-shadow: rgba(0, 0, 0, 0.3); /* Sombra de tarjetas */
     --divider-color: #D6A77C; /* Color de divisores (más claro) */
-    --timeline-bg: #2E2A25; /* Fondo para timeline */
+    --timeline-bg: #1C1B18; /* Fondo para timeline más oscuro */
     --timeline-text: #F5EFE6; /* Texto para timeline */
+    --section-dark-bg: #1C1B18; /* Fondo oscuro para secciones específicas */
 }
 
 /* Estilos para el botón de cambio de tema */
@@ -112,6 +113,18 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Secciones con fondo oscuro en tema oscuro */
+[data-theme="dark"] #proceso,
+[data-theme="dark"] .valores-section,
+[data-theme="dark"] .certificaciones-section,
+[data-theme="dark"] .conocer-mas-section,
+[data-theme="dark"] .ready-to-try-section,
+[data-theme="dark"] section.bg-light,
+[data-theme="dark"] .bg-light {
+    background-color: var(--section-dark-bg) !important;
+    color: var(--text-primary) !important;
+}
+
 .navbar {
     background-color: var(--navbar-bg);
     transition: background-color 0.3s ease, padding 0.3s ease;
@@ -175,4 +188,56 @@ body {
 
 [data-theme="dark"] .hero-section .overlay {
     background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Ajustes para secciones en tema oscuro */
+[data-theme="dark"] #nosotros,
+[data-theme="dark"] .about-header,
+[data-theme="dark"] .process-header,
+[data-theme="dark"] .timeline,
+[data-theme="dark"] .process-step,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-body,
+[data-theme="dark"] .modal-footer {
+    background-color: var(--section-dark-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Ajustes específicos para elementos con clase bg-light */
+[data-theme="dark"] .bg-light,
+[data-theme="dark"] section.bg-light,
+[data-theme="dark"] div.bg-light {
+    background-color: var(--section-dark-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Estilos para los acordeones en modo oscuro */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-1);
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: var(--accent-1);
+    color: var(--btn-text);
+}
+
+[data-theme="dark"] .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(214, 167, 124, 0.25);
+    border-color: var(--accent-1);
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1);
+}
+
+[data-theme="dark"] .accordion-body {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
 }
