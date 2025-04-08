@@ -54,6 +54,18 @@
     background-color: var(--primary-color);
     color: white;
     padding: 80px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ajuste específico para el tema oscuro */
+[data-theme="dark"] .process-facts {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Ajuste específico para el tema claro */
+:root .process-facts {
+    color: #FFFFFF;
 }
 
 .fact-item {
@@ -66,10 +78,27 @@
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Ajuste del color de los números para el tema oscuro */
+[data-theme="dark"] .fact-number {
+    color: var(--accent-1);
+}
+
+/* Ajuste del color de los números para el tema claro */
+:root .fact-number {
+    color: #FFFFFF;
 }
 
 .fact-text {
     font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Ajuste del color del texto para el tema claro */
+:root .fact-text {
+    color: #FFFFFF;
 }
 
 .quality-section {
