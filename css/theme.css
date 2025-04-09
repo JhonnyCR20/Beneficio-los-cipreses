@@ -181,6 +181,65 @@ body {
     color: var(--text-primary);
 }
 
+/* Estilos específicos para el footer en tema claro */
+:root {
+    --footer-text-color: #3E2723; /* Marrón oscuro para mejor legibilidad en tema claro */
+    --footer-hover-color: var(--accent-1); /* Color café al hacer hover */
+    --footer-icon-color: var(--accent-1); /* Color de iconos en tema claro */
+    --footer-bg-hover: rgba(164, 113, 72, 0.1); /* Fondo hover suave en tema claro */
+}
+
+/* Footer en tema claro */
+.footer a {
+    color: var(--footer-text-color);
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--footer-hover-color);
+}
+
+.footer-title {
+    color: var(--footer-text-color);
+    font-weight: 600;
+}
+
+.footer-contact li i {
+    color: var(--footer-icon-color);
+}
+
+.footer-social a {
+    color: var(--footer-text-color);
+    background-color: var(--footer-bg-hover);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--footer-hover-color);
+    color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    color: var(--footer-text-color);
+}
+
+/* Mantener colores originales para el tema oscuro */
+[data-theme="dark"] .footer a,
+[data-theme="dark"] .footer-title,
+[data-theme="dark"] .footer-bottom {
+    color: var(--white-color, #FFFFFF);
+}
+
+[data-theme="dark"] .footer-contact li i {
+    color: var(--accent-1);
+}
+
+[data-theme="dark"] .footer-social a {
+    color: var(--white-color, #FFFFFF);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Ajustes para el hero section */
 .hero-section .overlay {
     background-color: rgba(0, 0, 0, 0.4);

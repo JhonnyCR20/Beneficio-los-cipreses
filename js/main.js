@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Actualizar el estado del interruptor según el tema actual
     if (currentTheme === 'dark') {
         themeSwitch.checked = true;
+        updateLogoForTheme('dark');
+    } else {
+        updateLogoForTheme('light');
     }
     
     // Manejar el cambio de tema cuando se hace clic en el interruptor
@@ -18,11 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
         if (this.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
+            updateLogoForTheme('dark');
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
+            updateLogoForTheme('light');
         }
     });
+    
+    // Función para actualizar el logo según el tema
+    function updateLogoForTheme(theme) {
+        const footerLogo = document.querySelector('.footer-logo');
+        if (footerLogo) {
+            if (theme === 'dark') {
+                footerLogo.src = 'img/logo claro.png';
+            } else {
+                footerLogo.src = 'img/logo obscuro.png';
+            }
+        }
+    }
     
     // Función para inicializar las miniaturas del carrusel
     function initCarouselThumbnails() {
@@ -110,19 +127,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // Activar link de navbar según la sección visible
+    // Activar link de navbar según la sección visible o la página actual
+    function setActiveNavLink() {
+        // Obtener la página actual del pathname
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Remover la clase active de todos los enlaces
+        document.querySelectorAll('.nav-link').forEach(navLink => {
+            navLink.classList.remove('active');
+        });
+        
+        // Establecer active en el enlace correspondiente a la página actual
+        document.querySelectorAll('.nav-link').forEach(navLink => {
+            const navHref = navLink.getAttribute('href');
+            if (navHref === currentPage) {
+                navLink.classList.add('active');
+            }
+        });
+    }
+    
+    // Ejecutar al cargar la página
+    setActiveNavLink();
+    
+    // Ejecutar al hacer scroll
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
+        setActiveNavLink();
         
+        // Para enlaces internos dentro de la misma página
         document.querySelectorAll('section').forEach(section => {
             const sectionTop = section.offsetTop - 100;
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute('id');
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom && sectionId) {
                 document.querySelectorAll('.nav-link').forEach(navLink => {
-                    navLink.classList.remove('active');
+                    // Solo actualizar enlaces internos, no los de navegación principal
                     if (navLink.getAttribute('href') === '#' + sectionId) {
+                        document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+                            link.classList.remove('active');
+                        });
                         navLink.classList.add('active');
                     }
                 });

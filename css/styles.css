@@ -326,8 +326,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--dark-color);
-    color: var(--white-color);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     padding: 50px 0 20px;
 }
 
@@ -403,6 +403,21 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    justify-content: center; /* Centrar los iconos sociales */
+}
+
+/* Restaurar alineación a la izquierda en pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+
+/* Restaurar alineación a la izquierda en pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .footer-social {
+        justify-content: flex-start;
+    }
 }
 
 .footer-social a {
