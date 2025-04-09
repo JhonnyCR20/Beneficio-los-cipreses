@@ -97,6 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // Cerrar el menú móvil cuando se hace clic en un enlace
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) { // Solo en dispositivos móviles
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+    
     // Smooth scrolling SOLO para links internos que comienzan con #
     document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

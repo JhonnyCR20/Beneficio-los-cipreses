@@ -125,3 +125,128 @@
     color: var(--primary-color);
     margin-bottom: 20px;
 }
+
+/* Estilos responsivos para la página de proceso */
+@media (max-width: 991.98px) {
+    .process-header {
+        padding: 100px 0 50px;
+    }
+    
+    .process-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .process-step {
+        padding: 60px 0;
+    }
+    
+    .process-number {
+        font-size: 4rem;
+    }
+    
+    .process-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .fact-number {
+        font-size: 2.5rem;
+    }
+    
+    .fact-text {
+        font-size: 1.1rem;
+    }
+    
+    .quality-icon {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .process-header {
+        padding: 90px 0 40px;
+    }
+    
+    .process-header h1 {
+        font-size: 2rem;
+    }
+    
+    .process-step {
+        padding: 50px 0;
+    }
+    
+    .process-image {
+        margin-bottom: 30px;
+    }
+    
+    .process-number {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .process-content h3 {
+        font-size: 1.6rem;
+    }
+    
+    .process-content p {
+        font-size: 1rem;
+    }
+    
+    .fact-item {
+        margin-bottom: 40px;
+    }
+    
+    .quality-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .process-header {
+        padding: 80px 0 30px;
+    }
+    
+    .process-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .process-step {
+        padding: 40px 0;
+    }
+    
+    .process-number {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    
+    .process-content h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .process-content p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    .process-content ul li {
+        font-size: 0.9rem;
+    }
+    
+    .fact-number {
+        font-size: 2.2rem;
+    }
+    
+    .fact-text {
+        font-size: 1rem;
+    }
+    
+    .quality-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .quality-card {
+        padding: 20px;
+    }
+}

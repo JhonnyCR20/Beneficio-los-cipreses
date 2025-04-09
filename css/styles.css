@@ -458,9 +458,34 @@ body {
     .hero-section h1 {
         font-size: 2.5rem;
     }
+    
+    .product-img img {
+        height: 220px;
+    }
+    
+    .icon-box {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .icon-box i {
+        font-size: 1.8rem;
+    }
+    
+    .process-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .footer-widget h4 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
     .hero-section {
         height: 70vh;
     }
@@ -480,9 +505,39 @@ body {
     .contact-info {
         margin-bottom: 30px;
     }
+    
+    .product-img img {
+        height: 200px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-content:before {
+        font-size: 3rem;
+    }
+    
+    .footer-widget {
+        margin-bottom: 25px;
+    }
+    
+    .footer-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 575.98px) {
+    .navbar-brand img {
+        height: 25px !important;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
     .hero-section {
         height: 60vh;
     }
@@ -495,6 +550,10 @@ body {
         font-size: 1rem;
     }
     
+    .hero-section img {
+        height: 60px !important;
+    }
+    
     .btn-lg {
         padding: 8px 20px;
         font-size: 0.9rem;
@@ -502,5 +561,34 @@ body {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .product-img img {
+        height: 180px;
+    }
+    
+    .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-box i {
+        font-size: 1.5rem;
+    }
+    
+    .process-card {
+        padding: 20px 15px;
+    }
+    
+    .process-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.8rem;
     }
 }
